@@ -1,0 +1,22 @@
+System.register("chunks:///_virtual/EasingSample.ts",["./rollupPluginModLoBabelHelpers.js","cc"],(function(t){var n,e,i,a,o,r,u,s,l,c,p,b,g,I,O,d,h;return{setters:[function(t){n=t.applyDecoratedDescriptor,e=t.inheritsLoose,i=t.initializerDefineProperty,a=t.assertThisInitialized},function(t){o=t.cclegacy,r=t._decorator,u=t.Slider,s=t.CCInteger,l=t.Label,c=t.Node,p=t.UITransform,b=t.Input,g=t.Tween,I=t.Vec3,O=t.tween,d=t.instantiate,h=t.Component}],execute:function(){var f,m,y,v,S,E,w,z,q,D,N,L,T,_,x,C,M,U,A,k,V,F,R;o._RF.push({},"2145dhMbhVF4Z2ncr9L3Lg3","EasingSample",void 0);var P=r.ccclass,W=r.property;t("EasingSample",(f=P("EasingSample"),m=W(u),y=W(s),v=W(l),S=W(c),E=W(c),w=W(c),z=W(l),q=W(c),D=W(c),N=W(c),f((_=n((T=function(t){function n(){for(var n,e=arguments.length,o=new Array(e),r=0;r<e;r++)o[r]=arguments[r];return(n=t.call.apply(t,[this].concat(o))||this).eases=["linear","smooth","fade","constant","quadIn","quadOut","quadInOut","quadOutIn","cubicIn","cubicOut","cubicInOut","cubicOutIn","quartIn","quartOut","quartInOut","quartOutIn","quintIn","quintOut","quintInOut","quintOutIn","sineIn","sineOut","sineInOut","sineOutIn","expoIn","expoOut","expoInOut","expoOutIn","circIn","circOut","circInOut","circOutIn","elasticIn","elasticOut","elasticInOut","elasticOutIn","backIn","backOut","backInOut","backOutIn","bounceIn","bounceOut","bounceInOut","bounceOutIn"],n.curEasing="linear",i(n,"durationSlider",_,a(n)),i(n,"duration",x,a(n)),i(n,"durationLabel",C,a(n)),n.MAX_DURATION=10,n.canvas=void 0,i(n,"panel",M,a(n)),i(n,"character",U,a(n)),i(n,"easingSelect",A,a(n)),i(n,"easingValue",k,a(n)),i(n,"optionsNode",V,a(n)),i(n,"optionContent",F,a(n)),i(n,"optionItem",R,a(n)),n}e(n,t);var o=n.prototype;return o.start=function(){var t=this;this.canvas=this.getComponent(p),this.durationSlider.node.on("slide",this.setDuration,this),this.setDuration(),this.panel.on(b.EventType.MOUSE_DOWN,(function(n){g.stopAllByTarget(t.character),t.optionsNode.active=!1;var e=n.getUILocation(),i=new I(e.x-t.canvas.contentSize.x/2,e.y-t.canvas.contentSize.y/2,0);O(t.character).to(t.duration,{position:i},{easing:t.curEasing}).start()})),this.initOptions(),this.setEase(this.curEasing)},o.setDuration=function(){this.duration=this.durationSlider.progress*this.MAX_DURATION,this.durationLabel.string=this.duration.toFixed(2)+"s"},o.initOptions=function(){for(var t=this,n=function(){var n=t.eases[e],i=d(t.optionItem);i.name=n,i.getComponent(l).string=n,i.setParent(t.optionContent),i.on(c.EventType.MOUSE_DOWN,(function(n){t.setEase(i.name),n.propagationStopped=!0}),t)},e=0;e<this.eases.length;e++)n();this.easingSelect.on(b.EventType.MOUSE_DOWN,(function(n){t.optionsNode.active=!0}),this)},o.setEase=function(t){this.curEasing=t,this.easingValue.string=this.curEasing,this.optionsNode.active=!1},n}(h)).prototype,"durationSlider",[m],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),x=n(T.prototype,"duration",[y],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return 1}}),C=n(T.prototype,"durationLabel",[v],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),M=n(T.prototype,"panel",[S],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),U=n(T.prototype,"character",[E],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),A=n(T.prototype,"easingSelect",[w],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),k=n(T.prototype,"easingValue",[z],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),V=n(T.prototype,"optionsNode",[q],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),F=n(T.prototype,"optionContent",[D],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),R=n(T.prototype,"optionItem",[N],{configurable:!0,enumerable:!0,writable:!0,initializer:null}),L=T))||L));o._RF.pop()}}}));
+
+System.register("chunks:///_virtual/main",["./EasingSample.ts"],(function(){return{setters:[null],execute:function(){}}}));
+
+(function(r) {
+  r('virtual:///prerequisite-imports/main', 'chunks:///_virtual/main'); 
+})(function(mid, cid) {
+    System.register(mid, [cid], function (_export, _context) {
+    return {
+        setters: [function(_m) {
+            var _exportObj = {};
+
+            for (var _key in _m) {
+              if (_key !== "default" && _key !== "__esModule") _exportObj[_key] = _m[_key];
+            }
+      
+            _export(_exportObj);
+        }],
+        execute: function () { }
+    };
+    });
+});
